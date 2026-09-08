@@ -1,37 +1,20 @@
 Git to system kontroli wersji, który pozwala śledzić zmiany w projekcie, wracać do wcześniejszych wersji kodu oraz współpracować nad projektem z innymi osobami.
 
-git init – tworzy nowe repozytorium Git
-
-git clone – pobiera istniejące repozytorium na komputer
-
-git add – dodaje zmiany do przygotowania do commita
-
-git commit – zapisuje zmiany w historii
-
-git status – pokazuje aktualny stan repozytorium
-
-git log – pokazuje historię commitów
-
-git branch – tworzy, usuwa lub wyświetla branche
-
-git switch – przełącza się między branchami
-
-git merge – łączy dwa branche
-
-git rebase – przenosi commity na podstawie innej gałęzi, często używany do uporządkowania historii
-
-git push – wysyła lokalne commity do zdalnego repozytorium
-
-git pull – pobiera zmiany ze zdalnego repozytorium i łączy je z lokalnymi zmianami
-
-git fetch – pobiera informacje o zmianach ze zdalnego repozytorium, ale nie łączy ich automatycznie z naszym kodem
-
-git diff – pokazuje różnice między zmianami
-
-git restore – pozwala cofnąć zmiany w plikach
-
-git reset – pozwala cofnąć commit lub zmiany w zależności od użytej opcji
-
-git stash – tymczasowo odkłada niezacommitowane zmiany, żeby można było np. przełączyć się na inny branch
-
-git remote – zarządza połączeniem z repozytorium zdalnym, np. GitHubem
+git init - tworzy nowe repozytorium Git
+git clone - pobiera istniejące repozytorium na komputer
+git add - dodaje zmiany do przygotowania do commita
+git commit - zapisuje zmiany w historii
+git status - pokazuje aktualny stan repozytorium
+git log - pokazuje historię commitów
+git branch - tworzy, usuwa lub wyświetla branche
+git switch - przełącza się między branchami
+git merge - łączy dwa branche
+git rebase - przenosi commity na podstawie innej gałęzi, często używany do uporządkowania historii
+git push - wysyła lokalne commity do zdalnego repozytorium
+git pull - pobiera zmiany ze zdalnego repozytorium i łączy je z lokalnymi zmianami
+git fetch - pobiera informacje o zmianach ze zdalnego repozytorium, ale nie łączy ich automatycznie z naszym kodem
+git diff - pokazuje różnice między zmianami
+git restore - pozwala cofnąć zmiany w plikach
+git reset - pozwala cofnąć commit lub zmiany w zależności od użytej opcji
+git stash - tymczasowo odkłada niezacommitowane zmiany, żeby można było np. przełączyć się na inny branch
+git remote - zarządza połączeniem z repozytorium zdalnym, np. GitHubem
