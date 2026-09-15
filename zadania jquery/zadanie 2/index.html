@@ -19,7 +19,21 @@
                 $('li').odd().css("background-color", "black")
                 $('li').odd().css("color", "white")
             });
-
+            
+            $(function() {
+                console.log($("ul").html());
+                console.log($("li").eq(0).text());
+                    $("ul").append("<li>" + "Blood of dawnwalker" + "</li>");
+                
+                    let $a = $('li').last();
+                        $('li').last().remove();
+                        $('ul').prepend($a);
+                
+                        let $b = $("h1")
+                            $("h1").remove()
+                            $("p").append("b");
+            });
+                
     </script>
         <style>
         body {
