@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wprowadzenie jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+
+    <script>
+        $(function() {
+
+                $("#naKoniec").click(function() {
+                    $("#lista").append("<li>" + $("#produkt").val() + "</li>");
+                    $("#produkt").val("");
+                    $("li").last().css("color", "blue")
+            
+            });
+                $("#naPoczatek").click(function() {
+                    $("#lista").prepend("<li>" + $("#produkt").val() + "</li>");
+                    $("#produkt").val("");
+                    $("li").first().css("color", "green");
+            });
+
+            $("#answer").change(function(){
+                if (this.checked){
+                    $("#send").removeAttr("disabled");
+                }else{
+                    $("#send").attr("disabled", "diabled");
+                }     
+            })
+        });
+
+
+    </script>
+</head>
+
+<body>
+
+    <ul id="lista">
+        <li>Chleb</li>
+        <li>Mleko</li>
+    </ul>
+
+    <input type="text" id="produkt" placeholder="Nazwa produktu">
+
+    <button id="naKoniec">Dodaj na koniec</button>
+    <button id="naPoczatek">Dodaj na początek</button>
+    <br>
+    <input type="checkbox" id="answer" name="answer">
+    <label for="answer"> zgadzam sie na wyslanie</label></br>
+    <button id="send" disabled>Wyslij</button>
+</body>
+</html>
