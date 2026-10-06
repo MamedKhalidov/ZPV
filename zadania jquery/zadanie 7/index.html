@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wprowadzenie jQuery</title>
+    <script
+  src="https://code.jquery.com/jquery-4.0.0.min.js"
+  integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+  crossorigin="anonymous"></script>
+    <script>
+            $(function () {
+
+        $("#zmien").click(function () {
+                $("#tekst").text("Nowy tekst");
+        });
+
+        $("#przelacz").click(function () {
+                $("#pudelko").toggle();
+        });
+
+        $(".akapit").click(function () {
+                $(this).toggleClass("podswietlony");
+        });
+
+        $("#przywitaj").click(function () {
+            let imie = $("#imie").val().trim();
+                $("#wynik").text("Cześć " + imie);
+        });
+
+        $("#akceptuje").on("change", function () {
+            if (this.checked) {
+                $("#wyslij").removeAttr("disabled");
+            } else {
+                $("#wyslij").attr("disabled", "disabled");
+            }
+        });
+
+        $("li").each(function (index, element) {
+            $(element).text((index + 1) + ". " + $(element).text());
+        });
+
+        $("#zaloguj").click(function(){
+            let login = $("#login").val();
+            let haslo = $("#haslo").val();
+        if(login.length >= 3 && haslo.length >= 6){
+            $("#komunikat").text("Zalogowano").css("color", "green")
+            } else {
+                $("komunikat").text("zle").css("color", "red")
+            }
+    })
+
+});
+    </script>
+    <style> 
+        .podswietlony {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <p id="tekst">Stary tekst</p>
+    <button id="zmien">Zmien</button>
+
+    <div id="pudelko">Widzisz mnie</div>
+    <button id="przelacz">pokaz/ukryj</button>
+
+    <p class="akapit">Kliknij mnie</p>
+
+    <input type="text" id="imie">
+    <button id="przywitaj">Przywitaj</button>
+    <p id="wynik"></p>
+
+    <label><input type="checkbox" id="akceptuje">akceptuje regulamin</label>
+    <button id="wyslij" disabled>wyslij</button>
+
+    <ul id="menu">
+        <li>Strona Glowna</li>
+        <li>O nas</li>
+        <li>Kontakt</li>
+    </ul>
+
+    <input type="text" id="login">
+    <input type="password" id="haslo">
+    <button id="zaloguj">Zaloguj</button>
+    <p id="komunikat"></p>
+
+</body>
+</html>
