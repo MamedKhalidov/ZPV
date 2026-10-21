@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+        src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function(){
+            // $("#sprawdz").click(function(){
+            //     if($("#tekst").val().trim() === " "){
+            //         $("#komunikat").text("to pole jest puste")
+            //     } else {
+            //         $("#komunikat").text($("tekst").val())
+            //     }
+            // })
+
+
+            // let nazwisko = $("nazwisko").val().trim()
+            //     if (nazwisko === ""){
+            //         $("#komunikat").text("Podaj nazwisko").css("color","red")            
+            //     } else {
+            //         $("komunikat").text("wyslano formularz").css("color", "green")
+            //     }
+
+
+                // $("#sprawdz").click(function(){
+                //     let wiek = $("wiek").val();
+                //     if(isNaN(wiek)){
+                //         $("#blad").text("Wiek musi byc liczba")
+                //     } else {
+                //         $("#blad").text("Masz " + wiek + " lat")
+                //     }
+                // })
+
+                $("#zapisz").click(function(){
+                    let ocena = $("#ocena").val().trim();
+
+                    if(isNaN(ocena)){
+                        $("#blad").text("to nie jest liczba")
+                    } else if(ocena < 1 || ocena > 6){
+                        $("#blad").text("Ocena musi byc z zakresu 1-6")
+                    } else {
+                        $("#blad").text("zapisano ocene " + ocena)
+                    }
+                })
+
+        })
+
+        
+        
+    </script>
+        </head>
+<body>
+    <input type="text" id="tekst">
+
+    <input type="button" id="sprawdz" value="Check">
+
+    <form id="formularz">
+        <input type="text" id="nazwisko">
+        <input type="submit" value="Wyslij">
+    </form>
+        <p id="komunikat"></p>
+        <hr>
+        <input type="text" id="wiek">
+        <button id="sprawdz">sprawdz</button>
+        <p id="blad"></p>
+
+        <input type="text" id="ocena">
+        <button id="zapisz">zapisz</button>
+</body>
+</html>
